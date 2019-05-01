@@ -1,33 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Unicase|Roboto+Condensed');
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
 }
+.user-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 500px;
+  background: #247BA0;
+  background-image: linear-gradient(to right, #247BA0 , #C3DFE0);
+  position: relative;
+  padding: 5%;
+  /* font-family: 'Cormorant Unicase', serif; */
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+
+  /* border: 4px double white; */
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.login-info {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-content: center;
+  text-align: center;
+}
+.login-info {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.login-info {
+  text-shadow: 1px 1px 9px #000000a3;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.login-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  right: 5%;
+  justify-content: center;
+  align-items: center;
+  width: 308px;
+  height: 137%;
+  background: white;
+  box-shadow: inset -6px -8px 20px 20px #0000000a, 2px 2px 2px 2px #1716241c;
+  transition-duration: 0.8s;
+}
+.login-container h2 {
+  color: tomato;
+  text-transform: capitalize;
+}
+.login-container::before {
+  content: ""
+}
+.login-container::after {
+  content: ""
+}
+.login-form {
+  display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 20vh;
+}
+.login-form button {
+  background: tomato;
+  color: white;
+  text-transform: capitalize;
+}
+button {
+  align-self: center;
+    background: none;
+    color: white;
+    padding: 14px;
+    border: 2px solid;
+}
+.form-inputs{
+  animation-name: slide;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation: slide-in 5s 1
+  
+}
+input {
+  position: relative;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+@keyframes slide {
+  0%{
+    opacity: 0;
+    left: 40px
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    opacity: 1;
+    left: 0px
   }
 }
